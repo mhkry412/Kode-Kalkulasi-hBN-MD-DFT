@@ -1,0 +1,10 @@
+&PROJWFC
+   prefix       = 'hBN'
+   outdir       = './outdir/'
+   DeltaE       = 0.01
+   ngauss       = -1
+   degauss      = 0.01
+   kresolveddos = .false.
+   filproj      = 'hBN.proj'
+   filpdos      = 'hBN.pdos'
+/

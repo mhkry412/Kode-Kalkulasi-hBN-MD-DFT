@@ -1,0 +1,21 @@
+&INPUTPP
+   prefix       = 'hBN'             ! must match your pw.x prefix
+   outdir       = './outdir/'       ! directory where pw.x wrote the .save folder
+   filplot      = 'hBN_rho.dat'         ! base name for intermediate density file
+   plot_num     = 0                 ! 0 = total charge density (ρ) 
+/
+&PLOT
+   nfile        = 1
+   filepp(1)    = 'hBN_rho.dat'         ! points to the intermediate file created above
+   weight(1)    = 1.0               ! use the data with unit weight
+   iflag        = 3                 ! full 3D grid
+   output_format= 6                 ! 6 = Gaussian Cube format
+   e1(1)=8.28, e1(2)=0.00, e1(3)=0.00   ! a1 vector in Å (4×2.07 Å)
+   e2(1)=0.00, e2(2)=8.28, e2(3)=0.00   ! a2 vector
+   e3(1)=0.00, e3(2)=0.00, e3(3)=15.00  ! a3 vector (monolayer + vacuum)
+   x0(1)=0.00, x0(2)=0.00, x0(3)=0.00   ! origin of the grid
+   nx           = 80                ! grid points along a1
+   ny           = 80                ! grid points along a2
+   nz           = 60                ! grid points along a3 (captures vacuum)
+   fileout      = 'hBN_rho.cube'    ! output Cube file
+/

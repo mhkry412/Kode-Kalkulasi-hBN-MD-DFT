@@ -1,0 +1,6 @@
+&BANDS
+   prefix         = 'hBN'
+   outdir         = './outdir/'
+   filband        = 'hBN_bands_up.dat'
+   spin_component = 1
+/

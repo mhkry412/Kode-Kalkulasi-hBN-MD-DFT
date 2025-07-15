@@ -1,0 +1,22 @@
+ &INPUTPP
+   prefix     = 'hBN'
+   outdir     = './outdir/'
+   filplot    = 'hBN_spin.spin'
+   plot_num   = 6
+/
+
+&PLOT
+   nfile         = 1
+   filepp(1)     = 'hBN_spin.spin'
+   weight(1)     = 1.0
+   iflag         = 3
+   output_format = 6       ! try 6 first
+   e1(1)=8.28, e1(2)=0.00, e1(3)=0.00
+   e2(1)=0.00, e2(2)=8.28, e2(3)=0.00
+   e3(1)=0.00, e3(2)=0.00, e3(3)=15.00
+   x0(1)=0.00, x0(2)=0.00, x0(3)=0.00
+   nx = 80
+   ny = 80
+   nz = 80
+   fileout       = 'hBN_spin.cube'
+/
